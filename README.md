@@ -2,5 +2,4 @@
 
 # [JAVASCRIPT/TYPESCRIPT LIBRARY](https://www.npmjs.com/package/esc-pos-printer)
 
-
-Full documentation: 
+# [DOCUMENTATION](https://escpos-printermanager.netlify.app/)
