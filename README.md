@@ -1,0 +1,1 @@
+# esc-pos-printer-manager-releases
