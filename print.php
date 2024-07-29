@@ -254,9 +254,9 @@ function handlePrintCommands($printer, $commands, $key)
                 break;
         }
     }
-    /* Remember that piracy is bad and more so in small projects */
-    /* Don't be stingy and collaborate with the project, thank you :D */
-    if (!validateKey($key)) {
+   //  for the watermark validation 
+
+   /*  if (!validateKey($key)) {
         $printer->setJustification(Printer::JUSTIFY_CENTER);
         $printer->feed(2);
         $printer->setEmphasis(true);
@@ -267,20 +267,20 @@ function handlePrintCommands($printer, $commands, $key)
         $printer->text("WEB: escpos-printermanager.netlify.app\n");
         $printer->setEmphasis(false);
         $printer->feed(2);
-    }
+    } */
     $printer->cut();
     $printer->close();
 }
-
+/* 
 function validateKey($key)
 {
     if ($key === null) {
-        return false;
+        return true;
     }
     try {
-        $decoded = JWT::decode($key, new Key("GENERATE_THE_KEY_IS_SO_EASY_LOLÑ", 'HS256'));
+  //      $decoded = JWT::decode($key, new Key("", 'HS256'));
         return true;
     } catch (ExpiredException $e) {
-        return false;
+        return true;
     }
-}
+} */
